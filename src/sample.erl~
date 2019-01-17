@@ -1,0 +1,13 @@
+-module(sample).
+
+
+-export([
+	 do_stuff/1,
+	]).
+
+-include("record.hrl").
+
+do_stuff(SampleRecord) ->
+    io:format("~w~n", [SampleRecord]),
+    ok.
+
