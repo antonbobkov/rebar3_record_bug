@@ -1,9 +1,16 @@
-rebar_bug
-=====
+Relevant files are:
 
-An OTP application
+```
+src/record.hrl
+src/sample.erl
+test/sample_test.erl
+```
 
-Build
------
+How to recreate the bug:
 
-    $ rebar3 compile
+- Run `rebar3 eunit`. There are no errors.
+- Comment out line 4 in src/record.hrl
+- Run `rebar3 eunit`. There is an error.
+- Run `rm -rf _build`.
+- Run `rebar3 eunit`. There are no errors.
+
